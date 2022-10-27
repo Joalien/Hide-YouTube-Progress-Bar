@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Hide YouTube progress bar on pause",
+  "version": "1",
+  "description": "Hide YouTube progress bar on pause",
+  "permissions": ["menus"],
+  "background": {
+    "scripts": ["hideProgressBarMenu.js"]
+  },
+  "icons": {
+    "96": "favicon_144x144.png"
+  },
+  "content_scripts": [
+  {
+    "matches": ["*://www.youtube.com/*"],
+    "js": ["hideProgressBar.js"]
+  }
+]
+}
